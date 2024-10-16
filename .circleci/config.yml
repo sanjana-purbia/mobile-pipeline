@@ -31,13 +31,15 @@ jobs:
       # Setting up aws cli
       - aws-cli/install
       - aws-cli/setup
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
       
       - run:
           name: check v
           command: |
             node -v
             ruby -v
-            aws-cli -v
+            aws -v
 
 workflows:
   builds:
