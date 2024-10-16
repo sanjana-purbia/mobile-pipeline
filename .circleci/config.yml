@@ -37,7 +37,7 @@ jobs:
           command: |
             node -v
             ruby -v
-            aws -v
+            aws --version
 
 workflows:
   builds:
