@@ -34,7 +34,7 @@ jobs:
       
       - run:
           name: check v
-          comaamnd: |
+          command: |
             node -v
             ruby -v
             aws-cli -v
