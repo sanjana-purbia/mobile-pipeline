@@ -29,10 +29,8 @@ jobs:
           version: '2.7.5' 
 #************************************************************************************************
       # Setting up aws cli
-      - aws-cli/setup:
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          aws-region: AWS_DEFAULT_REGION
+      - aws-cli/install
+      - aws-cli/setup
       
       - run:
           name: check v
