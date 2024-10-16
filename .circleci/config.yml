@@ -38,6 +38,15 @@ jobs:
             node -v
             ruby -v
             aws --version
+#**************************************************Adding the fastlane **********************************************
+      - run:
+          name: install fastlane 
+          command: gem install fastlane
+          
+      - run: 
+          name: adding plugin
+          command: |
+              echo "y" | fastlane add_plugin firebase_app_distribution 
 
 workflows:
   builds:
