@@ -1,15 +1,23 @@
 version: 2.1
 
 
+
+
 android:
     executor:
       name: android/android-machine
       tag: 2024.01.1
       resource-class: large
-      
+jobs:
+  build:     
     steps:
 #***************************************************************
       # Code Checkout 
       - checkout
       - run:
         command: ls-lah
+
+workflows:
+  build:
+    jobs:
+      - build
