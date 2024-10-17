@@ -1,12 +1,12 @@
 source 'https://rubygems.org'
 
 # You may use http://rbenv.org/ or https://rvm.io/ to install and use this version
-ruby '2.7.5'
+ruby '3.3.0'
 
 gem 'cocoapods', '~> 1.11', '>= 1.11.2'
 
 gem 'fastlane'
 
-# Used to detects the Pluginfile and check which plugin we are using and this can allow the script to execute custom actions or perform other tasks related to the plugin.
+# Used to detect the Pluginfile and check which plugin we are using and this can allow the script to execute custom actions or perform other tasks related to the plugin.
 plugins_path = File.join(File.dirname(__FILE__), 'fastlane', 'Pluginfile')
 eval_gemfile(plugins_path) if File.exist?(plugins_path)
